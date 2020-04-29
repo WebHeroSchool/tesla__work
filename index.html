@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="./css/style.css">
   <title>Document</title>
 </head>
 <body>
   <div class="wrapper">
     <header class="header">
       <div class="heder__logo">
-        <img src="#" alt="logo">
+        <img src="./img/tesla_logo.png" alt="logo">
       </div>
       <nav class="header__nav">
-        <a href="#" class="header__link">Model S</a>
+        <a href="#" class="header__link link-active">Model S</a>
         <a href="#" class="header__link">Model X</a>
         <a href="#" class="header__link">Model 3</a>
         <a href="#" class="header__link">Roadster</a>
@@ -27,24 +27,32 @@
     </header>
     <main class="main">
       <section class="preview">
-        <h1 class="preview__title">Model S</h1>
-        <p class="preview__text">Добро пожаловать в будущее!</p>
+        <div class="preview__title">
+          <h1 class="preview__text">Model S</h1>
+          <p class="preview__subtext">Добро пожаловать в будущее!</p>
+        </div>
         <div class="preview__car">
-          <img src="#" alt="car" class="car__img">
+          <img class="car__img" src="./img/tesla_car.png" alt="car">
         </div>
         <div class="preview__spec">
           <div class="feature">
-            <div class="feature__item">
-              <img class="feature__img" src="#" alt="speed">
+            <div class="feature__item feature__item-left">
+              <img class="speed-icon" src="./img/Speed.svg" alt="speed">
               <div class="feature__indicators">
-                <span class="feature__index">2,7 сек</span>
+                <div class="feature__index">
+                  <span class="feature__bold">2,7</span>
+                  <span class="feature__text">сек</span>  
+                </div>
                 <span class="feature__substring">0-100 км/час</span>
               </div>
             </div>
             <div class="feature__item">
-              <img class="feature__img" src="#" alt="speed">
+              <img class="road-icon" src="./img/Road_icon.svg" alt="road">
               <div class="feature__indicators">
-                <span class="feature__index">632 км</span>
+                <div class="feature__index">
+                  <span class="feature__bold">632</span>
+                  <span class="feature__text">км</span>  
+                </div>
                 <span class="feature__substring">запас хода</span>
               </div>
             </div>
@@ -54,6 +62,9 @@
             <button class="btn">Заказать</button>
           </div>
         </div>
+        <button class="preview__arrow">
+          <img class="arrow-scroll" src="./img/arrow.svg" alt="arrow">
+        </button>
       </section>
       <section class="overview">
         <div class="overview__mian">
