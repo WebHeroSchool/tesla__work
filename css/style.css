@@ -155,6 +155,11 @@
   display: flex;
   flex-direction: column;
 }
+
+.feature__index{
+  font-family: 'Montserrat-Bold';
+}
+
 .speed-icon{
   width: 54px;
   height: 43px;
@@ -406,5 +411,13 @@
 
   .preview__arrow{
     margin: 34px 0;
+  }
+}
+
+/* extra desctopre resolution */
+
+@media (max-width: 960px){
+  .header__link{
+    margin: 0 7px;
   }
 }
