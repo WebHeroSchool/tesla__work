@@ -96,6 +96,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 
 .preview{
@@ -145,18 +146,18 @@
   display: flex;
 }
 
-.feature__item{
+.item{
   display: flex;
   align-items: center;
   margin-right: 81px;
 }
 
-.feature__indicators{
+.indicators{
   display: flex;
   flex-direction: column;
 }
 
-.feature__index{
+.index{
   font-family: 'Montserrat-Bold';
   display: flex;
   align-items: baseline;
@@ -173,18 +174,18 @@
   height: 58px;
 }
 
-.feature__bold{
+.bold{
   font-weight: 600;
   font-size: 35px;
   margin-right: 6px;
 }
 
-.feature__text{
+.text{
   font-weight: 600;
   font-size: 20px;
 }
 
-.feature__substring{
+.substring{
   font-size: 12px;
 }
 
@@ -236,9 +237,224 @@
   margin: 37px 0;
 }
 
+/* section - overview */
+
+.overview{
+  display: flex;
+  width: 100%;
+}
+
+.overview__main{
+  background: url('../img/tesla_salon.jpg') 0 100% no-repeat;
+  width: 100%;
+  /* background-size: cover;  for max-width */
+}
+
+.overview__model{
+  font-family: 'Montserrat-Bold';
+  color: #E51937;
+  font-size: 70px;
+  margin-left: 80px;
+  white-space: nowrap;
+}
+
+.overview__block{
+  max-width: 440px;
+  background-color: #E51937;
+  color: white;
+  padding: 51px 44px 63px 52px;
+}
+
+.overview__text{
+  margin-bottom: 54px;
+}
+
+.overview__discription{
+  margin-bottom: 171px;
+}
+
+.block__title{
+  font-family: Montserrat;
+  font-size: 30px;
+  margin-bottom: 11px;
+}
+
+.block__text{
+  font-size: 15px;
+  line-height: 18px;
+}
+
+.overview__item{
+  margin-bottom: 35px;
+}
+
+.overview__index{
+  font-family: 'Montserrat';
+}
+
+.overview__bold{
+  margin-right: 10px;
+}
+
+.screen-icon,
+.wifi-icon,
+.bag-icon{
+  margin-right: 19px;
+}
+
+.info{
+  display: flex;
+  align-items: center;
+}
+
+.info-icon{
+  margin-right: 8px;
+}
+
+.info__text{
+  font-family: 'Montserrat-Bold';
+  text-transform: uppercase;
+  font-size: 13px;
+  white-space: nowrap;
+  margin-right: 35px;
+  position: relative;
+  margin-left: 30px;
+  cursor: pointer;
+}
+
+.info__text::before{
+  position: absolute;
+  content: "";
+  background: url('../img/info.svg') center;
+  width: 22px;
+  height: 22px;
+  left: -30px;
+  top: -2px;
+}
+
+.info__text:hover.info__text::before{
+  background: url('../img/info-whitesvg.svg') center;
+}
+
+.btn-white{
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-white:hover{
+  color: #E51937;
+  background-color: white;
+}
+
+/* security section */
+
+.security{
+  display: flex;
+  width: 100%;
+}
+
+.security__block{
+  max-width: 440px;
+  background-color: #E51937;
+  color: white;
+  padding: 51px 56px 60px 52px;
+}
+
+.score__title{
+  font-size: 30px;
+  margin-bottom: 26px;
+}
+
+.score__columns{
+  display: flex;
+}
+.score__list:first-child{
+  margin-right: 42px;
+}
+
+.score__list:last-child{
+  margin-top: -5px;
+}
+ 
+.score__item{
+  margin-bottom: 16px;
+}
+.stars__item{
+  margin-bottom: 8px;
+}
+
+.score__text{
+  font-family: 'Montserrat-Bold';
+  font-size: 17px;
+  text-transform: uppercase;
+}
+
+.score__text-sub::after{
+  content: "(стойка)";
+  font-size: 10px;
+  opacity: 0.7;
+}
+
+.score__garant{
+  display: flex;
+  margin-left: 10px;
+  margin-bottom: 50px;
+  align-items: center;
+}
+
+.garant-icon{
+  margin-right: 23px;
+}
+
+.garant__text{
+  margin-bottom: 10px;
+}
+
+.garant__title{
+  font-size: 50px;
+}
+
+.garant__subtitle{
+  display: inline-block;
+  font-size: 25px;
+  margin-top: -10px;
+}
+
+.security__main{
+  display: flex;
+  width: 100%;
+}
+
+.security__score{
+  margin-bottom: 100px;
+}
+
+.security__text{
+  margin-bottom: 54px;
+}
+
+.security__bacground_title{
+  font-family: 'Montserrat-Bold';
+  font-size: 200px;
+  color: #E51937;
+  opacity: .1;
+  margin-top: 97px;
+  margin-left: auto;
+  user-select: none;
+}
+
+.security__img{
+  position: absolute;
+  bottom: 137px;
+  left: 344px;
+  width: 72%;
+}
+
+
 /* tablet resolution */
 
 @media (max-width: 768px) {
+
   .header__link{
     display: none;
   }
@@ -266,25 +482,23 @@
     margin-bottom: 55px;
   }
 
-  .feature__item{
+  .item{
     margin: 0 45px;
   }
 
   .speed-icon{
     width: 66px;
     height: 49px;
+    margin-right: 20px;
   }
 
   .road-icon{
     width: 44px;
     height: 72px;
+    margin-right: 20px;
   }
 
-  .feature__indicators{
-    margin-left: 20px;
-  }
-
-  .feature__bold{
+  .bold{
     font-size: 50px;
     margin-right: 9px;
   }
@@ -322,6 +536,113 @@
   .preview__arrow{
     margin-top: 64px;
   }
+
+  .overview{
+    flex-direction: column;
+  }
+
+  .overview__main{
+    height: 500px;
+    background-size: cover;
+    display: flex;
+  }
+
+  .overview__model{
+    margin-left: auto;
+    margin-right: 46px;
+  }
+
+  .overview__block{
+    max-width: 100%;
+    padding: 55px 48px 60px 34px;
+  }
+
+  .overview__discription{
+    display: flex;
+    margin-bottom: 60px;
+  }
+
+  .overview__text{
+    width: 50%;
+    margin-right: 104px;
+    margin-bottom: 0;
+  }
+
+  .overview__list{
+    width: 40%;
+  }
+
+  .overview__bold{
+    font-size: 35px;
+  }
+
+  .screen-icon,
+  .wifi-icon,
+  .bag-icon{
+  margin-right: 19px;
+  }
+
+  .overview__item{
+    margin: 0;
+    margin-bottom: 20px;
+  }
+
+  .block__title{
+    margin-bottom: 20px;
+  }
+
+  .info{
+    justify-content: center;
+  }
+
+  .security{
+    flex-direction: column;
+  }
+
+  .security__block{
+    max-width: 100%;
+    order: 2;
+    padding: 62px 55px 63px 34px;
+  }
+
+  .security__discription{
+    display: flex;
+    margin-bottom: 70px;
+  }
+
+  .security__bacground_title{
+    font-size: 148px;
+    margin-top: 37px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 537px;
+  }
+
+  .security__img{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+  }
+
+  .security__main{
+    position: relative;
+    order: 1;
+  }
+
+  .score__garant{
+    display: none;
+  }
+
+  .security__score{
+    margin-bottom: 0;
+  }
+
+  .security__text{
+    margin-bottom: 0;
+    margin-right: 71px;
+  }
+
 }
 
 /* phone resolution */
@@ -356,7 +677,7 @@
     margin-bottom: 43px;
   }
 
-  .feature__item{
+  .item{
     margin: 0;
   }
 
@@ -367,27 +688,25 @@
   .speed-icon{
     width: 38px;
     height: 28px;
+    margin-right: 13px;
   }
 
   .road-icon{
     width: 25px;
     height: 41px;
+    margin-right: 13px;
   }
 
-  .feature__indicators{
-    margin-left: 13px;
-  }
-
-  .feature__bold{
+  .bold{
     font-size: 27px;
     margin-right: 7px;
   }
 
-  .feature__text{
+  .text{
     font-size: 15px;
   }
 
-  .feature__substring{
+  .substring{
     font-size: 10px;
   }
 
@@ -417,6 +736,68 @@
   .preview__arrow{
     margin: 34px 0;
   }
+
+  .overview__main{
+    height: 337px;
+    background: url(../img/tesla_salon.jpg) center/cover no-repeat;
+  }
+
+  .overview__model{
+    display: none;
+  }
+
+  .overview__block{
+    padding: 18px 30px 34px 30px;
+  }
+
+ .overview__discription{
+    margin: 0;
+  }
+
+  .block__title{
+    margin-bottom: 9px;
+  }
+
+  .overview__text{
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .overview__list{
+    display: none;
+  }
+  
+  .info{
+    display: none;
+  }
+
+  .security__bacground_title{
+    font-size: 90px;
+    margin: 0;
+    margin-top: 25px;
+    white-space: nowrap;
+  }
+
+  .security__main{
+    height: 294px;
+  }
+
+  .security__block{
+    padding: 18px 30px 77px 30px;
+  }
+
+  .security__discription{
+    margin: 0;
+  }
+
+  .security__text{
+    margin: 0;
+  }
+
+  .security__score{
+    display: none;
+  }
+
 }
 
 /* extra desctopre resolution */

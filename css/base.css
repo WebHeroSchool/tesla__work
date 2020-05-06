@@ -26,7 +26,20 @@ button {
 .wrapper{
   overflow: hidden;
   max-width: 1440px;
-  min-width: 375px;
   margin: 0 auto;
   font-family: 'Montserrat';
 }
+
+@media (max-width: 768px) {
+  .wrapper{
+    min-width: 768px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper{
+    min-width: 375px;
+  }
+}
+
+
