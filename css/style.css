@@ -455,6 +455,25 @@
 }
 
 
+/* extra desctopre resolution */
+
+@media (max-width: 960px){
+  .header__link{
+    margin: 0 7px;
+  }
+
+  .security__bacground_title{
+    font-size: 10vw;
+  }
+}
+
+@media (max-width: 1140px){
+  .security__img {
+    bottom: 215px;
+    width: 57%;
+  }
+}
+
 /* tablet resolution */
 
 @media (max-width: 768px) {
@@ -798,21 +817,3 @@
 
 }
 
-/* extra desctopre resolution */
-
-@media (max-width: 960px){
-  .header__link{
-    margin: 0 7px;
-  }
-
-  .security__bacground_title{
-    font-size: 10vw;
-  }
-}
-
-@media (max-width: 1140px){
-  .security__img {
-    bottom: 215px;
-    width: 57%;
-  }
-}
