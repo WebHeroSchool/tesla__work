@@ -297,9 +297,12 @@
 }
 
 .screen-icon,
-.wifi-icon,
 .bag-icon{
   margin-right: 19px;
+}
+
+.wifi-icon{
+  margin-right: 11px;
 }
 
 .info{
@@ -435,12 +438,13 @@
 
 .security__bacground_title{
   font-family: 'Montserrat-Bold';
-  font-size: 200px;
+  font-size: 13vw;
   color: #E51937;
   opacity: .1;
   margin-top: 97px;
   margin-left: auto;
   user-select: none;
+  white-space: nowrap;
 }
 
 .security__img{
@@ -574,12 +578,6 @@
 
   .overview__bold{
     font-size: 35px;
-  }
-
-  .screen-icon,
-  .wifi-icon,
-  .bag-icon{
-  margin-right: 19px;
   }
 
   .overview__item{
@@ -805,5 +803,16 @@
 @media (max-width: 960px){
   .header__link{
     margin: 0 7px;
+  }
+
+  .security__bacground_title{
+    font-size: 10vw;
+  }
+}
+
+@media (max-width: 1140px){
+  .security__img {
+    bottom: 215px;
+    width: 57%;
   }
 }
